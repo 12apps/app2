@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <div class="panel">
-      <form class="form-horizontal" action="" method="post">
+      <%= form_for @offer do |f| %>
         <fieldset>
           <h1 class="text-center">Domains for sale</h1>
 
@@ -40,7 +40,7 @@
             </div>
           </div>
         </fieldset>
-      </form>
+      <% end %>
     </div>
   </div>
 </div>

@@ -3,4 +3,3 @@ class OffersController < ApplicationController
     # The domain resolutoin magic
     @host = request.host
   end
-end
