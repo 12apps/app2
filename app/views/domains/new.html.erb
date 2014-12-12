@@ -5,13 +5,16 @@
     <%= form_for @domain do |f| %>
       <div class="form-group">
         <label for="domain">Domain</label>
-        <input type="domain" name="domain" id="email" class="form-control" placeholder="domain.com">
+        <input type="domain" name="domain" class="form-control" placeholder="domain.com">
       </div>
       <div class="form-group">
         <label for="email">Your Email</label>
-        <input type="email" class="form-control" placeholder="you@domain.com">
+        <input type="email" name="email" class="form-control" placeholder="you@domain.com">
       </div>
       <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Submit">
+      <% if flash[:notice] %>
+        <div class="alert alert-success"><%= flash[:notice] %></div>
+      <% end %>
     <% end %>
   </div>
 </div>
