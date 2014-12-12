@@ -8,6 +8,6 @@ class OffersController < ApplicationController
     # params[:name], params[:email], params[:message]
     # Send an Email using ActionMailer
     #
-    # OfferMailer.send_offer(....).deliver
+    OfferMailer.send_offer(params[:name], params[:email], params[:message], request).deliver
   end
 end
