@@ -1,6 +1,6 @@
 class OffersController < ApplicationController
   def new
     # The domain resolutoin magic
-    puts request.inspect
+    @host = request.host
   end
 end
