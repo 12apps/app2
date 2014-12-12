@@ -1,6 +1,5 @@
 class OffersController < ApplicationController
   def new
-    # The domain resolutoin magic
+		@offer = Offer.new
     puts request.inspect
   end
-end
