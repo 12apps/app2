@@ -2,7 +2,7 @@
   <div class="col-lg-4 col-lg-offset-4 text-center well domain-form">
     <h1 class="form-title">BuyMe</h1>
     <p class="lead">Sell your domain. Simple.</p>
-    <form>
+    <%= form_for Domain.new do |f| %>
       <div class="form-group">
         <label for="domain">Domain</label>
         <input type="domain" name="domain" id="email" class="form-control" placeholder="domain.com">
@@ -12,6 +12,6 @@
         <input type="email" class="form-control" placeholder="you@domain.com">
       </div>
       <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Submit">
-    </form>
+    <% end %>
   </div>
 </div>
