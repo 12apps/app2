@@ -4,9 +4,9 @@ class DomainsController < ApplicationController
     @domain = Domain.new
   end
 
-  def create # domains#create
+  def create
     Domain.create domain_name: params[:domain], owner_email: params[:email]
-    flash[:notice] = "Success"
+    flash[:notice] = "Domain listed!"
     redirect_to "/"
   end
 

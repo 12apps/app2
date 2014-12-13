@@ -4,10 +4,8 @@ class OffersController < ApplicationController
   end
 
   def create
-    # data in params
-    # params[:name], params[:email], params[:message]
-    # Send an Email using ActionMailer
-    #
     OfferMailer.send_offer(params[:name], params[:email], params[:message], request).deliver
+    flash[:notice] = "Offer sent!"
+    redirect_to new_offer_path
   end
 end
